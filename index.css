@@ -1,0 +1,109 @@
+:root {
+    box-sizing: border-box;
+    --bg : #25283D;
+    --txt  : #EFD9CE;
+    --primary: #8F3985;
+    --secondary: #CEA2AC;
+    --alt: #A675A1;
+    font-size: .9rem;
+}
+body {
+    background-color: #000;  
+    color: var(--txt);  
+}
+*,*::before,*::after {
+    box-sizing: inherit;
+}
+h1 {
+    color: var(--secondary);
+    border-bottom:1px solid #333;
+    font-size:2.2rem;
+    margin-left:1rem;
+    width:91vw;
+    margin: 1rem auto;
+}
+
+.container {
+    width: 90vw;
+    margin: 2rem auto;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.avatar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: var(--primary);
+    transition: all 200ms ease-in-out;
+    width: 25rem;
+    margin: 1rem 0;
+    border-radius: .55rem;
+    box-shadow: 1px 1px 3px var(--alt);
+}
+.avatar:hover {
+    transform: scale(1.030);
+    box-shadow: 1px 1px 10px var(--alt);
+}
+.avatar.flip .avatar-image {
+    order: 1;
+}
+.avatar-image {
+    overflow: hidden;
+}
+.avatar-image img {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    min-width: 7rem;
+    border-radius: 50%;
+}
+
+.avatar-content {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: .9rem;
+}
+.avatar-header {
+    font-size: 1.3rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #efefef;
+    text-shadow: 1px 1px rgba(0,0,0,.5)
+}
+.avatar-location {
+    text-transform: capitalize;
+};
+.avatar-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-inline-start: 0;
+}
+.avatar-content ul>li {
+    margin: 0 0 .5rem 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+.avatar-content ul a {
+    color: var(--txt);
+    text-decoration: none;
+    font-size: 1.3rem;
+    padding: .25rem .5rem;
+    background-color: var(--alt);
+    margin: 0 .5rem;
+    border-radius: 50%;
+    line-height: 1;
+    text-shadow: 1px 1px rgba(0,0,0,.5)
+}
+.avatar-contact-list a:hover {
+    background-color: var(--secondary);
+}
